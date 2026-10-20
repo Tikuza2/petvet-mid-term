@@ -163,7 +163,7 @@ function VetCard({ vet }: { vet: (typeof VETS)[number] }) {
           })}
         </div>
         <Button variant="cta" className="mt-4 w-full" disabled={!slot} onClick={() => open({ vetId: vet.id, date: days[day], time: slot })}>
-          {slot ? `Book ${format(days[day], "MMM d")} · ${slot}` : "Pick a time slot"}
+          {slot ? `Book ${format(days[day]!, "MMM d")} · ${slot}` : "Pick a time slot"}
         </Button>
       </div>
     </div>

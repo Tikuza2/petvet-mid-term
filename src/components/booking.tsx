@@ -10,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { PETS, SERVICES, TIME_SLOTS, VETS } from "@/lib/data";
 
-type Prefill = { vetId?: string; service?: string; date?: Date; time?: string };
+type Prefill = { vetId?: string | undefined; service?: string | undefined; date?: Date | undefined; time?: string | undefined };
 const Ctx = createContext<{ open: (p?: Prefill) => void }>({ open: () => {} });
 export const useBooking = () => useContext(Ctx);
 
