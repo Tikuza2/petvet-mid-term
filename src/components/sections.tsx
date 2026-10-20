@@ -106,13 +106,13 @@ export function Services() {
       <SectionHead eyebrow="Services" title="Everything your pet needs" sub="From routine checkups to urgent care — handled by verified professionals." />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {SERVICE_CARDS.map(({ icon: Icon, title, desc, price }) => (
-          <button key={title} onClick={() => open({ service: title })} className="group rounded-2xl border bg-card p-6 text-left transition duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift">
+          <button key={title} onClick={() => open({ service: title })} className="group flex flex-col rounded-2xl border bg-card p-6 text-left transition duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-lift">
             <span className="grid size-14 place-items-center rounded-xl bg-primary-soft text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
               <Icon className="size-6" />
             </span>
             <h3 className="mt-5 text-xl font-semibold">{title}</h3>
             <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-            <div className="mt-5 flex items-center justify-between text-sm">
+            <div className="mt-auto flex items-center justify-between pt-5 text-sm">
               <span className="font-semibold text-primary">{price}</span>
               <span className="font-medium text-cta opacity-0 transition group-hover:opacity-100">Book →</span>
             </div>
